@@ -18,7 +18,6 @@ interface HeaderButtonProps {
 export const HeaderButton = styled.button<HeaderButtonProps>`
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.25rem;
 
   min-width: 2.3rem;
@@ -30,6 +29,23 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
   cursor: inherit;
 
   font-size: ${({ theme }) => theme.textSizes['text-regular-s']};
+
+  ${({ variant, theme }) =>
+    variant === 'purple' &&
+    css`
+      svg {
+        color: ${theme.colors[`brand-purple`]};
+      }
+    `}
+
+  ${({ variant, theme }) => css`
+    background: ${theme.colors[`brand-${variant}-light`]};
+    color: ${theme.colors[`brand-${variant}-dark`]};
+
+    span {
+      background: ${theme.colors[`brand-${variant}-dark`]};
+    }
+  `}
 
   span {
     position: absolute;
@@ -46,22 +62,5 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    ${({ variant, theme }) => css`
-      background: ${theme.colors[`brand-${variant}-light`]};
-      color: ${theme.colors[`brand-${variant}-dark`]};
-
-      span {
-        background: ${theme.colors[`brand-${variant}-dark`]};
-      }
-    `}
-
-    ${({ variant, theme }) =>
-      variant === 'purple' &&
-      css`
-        svg {
-          color: ${theme.colors[`brand-purple`]};
-        }
-      `}
   }
 `

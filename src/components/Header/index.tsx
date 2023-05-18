@@ -12,12 +12,12 @@ export function Header() {
       </NavLink>
 
       <HeaderButtonsContainer>
-        <HeaderButton variant={'yellow'}>
+        <HeaderButton variant={'purple'}>
           <MapPin size={20} weight="fill" />
           Porto Alegre, RS
         </HeaderButton>
 
-        <HeaderButton variant={'purple'}>
+        <HeaderButton variant={'yellow'}>
           <span>10</span>
           <ShoppingCart size={20} weight="fill" />
         </HeaderButton>
