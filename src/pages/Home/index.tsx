@@ -1,3 +1,14 @@
+import { Intro } from './components/Intro'
+import { OurCoffees } from './components/OurCoffees'
+import { HomeContainer } from './styles'
+
 export function Home() {
-  return <h1>Home</h1>
+  return (
+    <HomeContainer>
+      <main>
+        <Intro />
+        <OurCoffees />
+      </main>
+    </HomeContainer>
+  )
 }
