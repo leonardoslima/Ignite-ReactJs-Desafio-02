@@ -46,6 +46,7 @@ export function CatalogCard({ coffee }: CoffeeProps) {
             onIncrease={() => {}}
             onDecrease={() => {}}
             quantity={2}
+            size="medium"
           />
           <button onClick={() => {}}>
             <ShoppingCart weight="fill" size={22} />
