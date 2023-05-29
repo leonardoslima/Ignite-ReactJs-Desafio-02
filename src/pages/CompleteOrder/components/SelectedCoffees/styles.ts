@@ -21,3 +21,27 @@ export const DetailsContainer = styled.section`
   display: flex;
   flex-direction: column;
 `
+
+export const ConfirmationSectionContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  div p:nth-child(1) {
+    font-size: ${({ theme }) => theme.textSizes['text-regular-s']};
+  }
+`
+
+export const TotalDiv = styled.div`
+  > p {
+    font-size: ${({ theme }) => theme.textSizes['title-title-s']} !important;
+    font-weight: 700;
+    line-height: 1.625;
+  }
+`
