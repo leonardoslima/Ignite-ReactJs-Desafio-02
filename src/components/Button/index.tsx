@@ -1,5 +1,10 @@
+import { ButtonHTMLAttributes } from 'react'
 import { ButtonContainer } from './styles'
 
-export function Button() {
-  return <ButtonContainer>Label</ButtonContainer>
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  text: string | number
+}
+
+export function Button({ text, ...props }: ButtonProps) {
+  return <ButtonContainer {...props}>{text}</ButtonContainer>
 }
